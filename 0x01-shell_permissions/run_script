@@ -1,12 +1,7 @@
 #!/bin/bash
-touch .gitnore
-echo -e "run_script\n*~" >.gitgnore
-echo -e "#!/bin/bash\nchmod 755 hello" > 7-everybody
-chmod 745 7-everybody
+rm gitgnore
+touch .gitignore
+echo -e "run_scipt\n*~" > .gitignore
 git add .
-git commit -m"fix empty file"
-touch 8-James_Bond
-echo -e "#!/bin/bash\nchmod 007 hello" > 8-James_Bond
-chmod 745 8-James_Bond
-git add .
-git commit -m"multiple permissions"
+git commit -m"fix git ignore file"
+git push
