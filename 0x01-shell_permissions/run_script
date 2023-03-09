@@ -1,7 +1,22 @@
 #!/bin/bash
-rm gitgnore
+rm gitignore
 touch .gitignore
-echo -e "run_scipt\n*~" > .gitignore
+echo -e "/run_scipt\n*~" > .gitignore
 git add .
 git commit -m"fix git ignore file"
-git push
+rm 7-everybody
+touch 7-everybody
+echo -e "#!/bin/bash\nchmod +x  hello" > 7-everybody
+chmod 755 7-everybody
+git add .
+git commit -m"multiple permission"
+touch 9-John_Doe
+echo -e "#!/bin/bash\nchmod 753 hello" > 9-John_Doe
+chmod 755 9-John_Doe
+git add .
+git commit -m"set mode script"
+touch 10-mirror_permissions
+echo -e "#!/bin/bash\nchmod --reference=olleh hello"
+chmod 755 10-mirror_permissions
+git add .
+git commit -m"copy permissions"
