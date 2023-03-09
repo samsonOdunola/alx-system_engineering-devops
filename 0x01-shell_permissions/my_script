@@ -1,0 +1,12 @@
+#!/bin/bash
+touch 6-multiple_permissions
+echo -e #1/bin/bash\nchmod 554 hello\n > 6-multiple_permissions
+chmod 745 6-multiple_permissions
+git add .
+git commit -m"Create multiple permission script"
+git push
+touch 7-everybody
+echo -e #!/bin/bash\nchmod 555 hello\n > 7-everybody
+chmod 745 7-everybody
+git add .
+git push -m"create multiple permission script"
