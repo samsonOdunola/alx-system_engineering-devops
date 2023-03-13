@@ -1,0 +1,3 @@
+#!/bin/bash
+read user_list
+cat $user_list | uniq -u $user_list
