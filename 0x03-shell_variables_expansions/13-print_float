@@ -1,2 +1,2 @@
 #!/bin/bash
-printf "%f" $NUM | cut -b -4
+printf "%. 2f" $NUM
